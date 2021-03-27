@@ -1,6 +1,6 @@
 class Elevator < ApplicationRecord
   enum elevator_status: [:Active, :Inactive, :Intervention]
-  before_update :slack_notifier
+  # before_update :slack_notifier
   before_update :twilio_notifier
   belongs_to :column
   
@@ -20,13 +20,13 @@ class Elevator < ApplicationRecord
     end   
   end
   
-  def slack_notifier
-    if self.status_changed?
-    require 'date'
-    current_time = DateTime.now.strftime("%d-%m-%Y %H:%M")
-    notifier = Slack::Notifier.new ENV["Slack_API"]
-    notifier.ping "The Elevator #{self.id} with Serial Number #{self.serial_number} changed status from #{self.status_was} to #{self.status} at #{current_time}."
-    end
-  end
+  # def slack_notifier
+  #   if self.status_changed?
+  #   require 'date'
+  #   current_time = DateTime.now.strftime("%d-%m-%Y %H:%M")
+  #   notifier = Slack::Notifier.new ENV["Slack_API"]
+  #   notifier.ping "The Elevator #{self.id} with Serial Number #{self.serial_number} changed status from #{self.status_was} to #{self.status} at #{current_time}."
+  #   end
+  # end
   
 end
