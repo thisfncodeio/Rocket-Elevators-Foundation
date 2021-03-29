@@ -2,9 +2,9 @@
 # https://github.com/sendgrid/sendgrid-ruby
 require 'zendesk_api'
 require 'sendgrid-ruby'
-include SendGrid
 
 class LeadsController < ApplicationController
+    include SendGrid
     
     # POST /quotes or /quotes.json
     def create
