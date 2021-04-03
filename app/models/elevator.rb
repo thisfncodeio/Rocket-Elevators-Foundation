@@ -1,4 +1,7 @@
 class Elevator < ApplicationRecord
+  validates_presence_of :column
+  validates_presence_of :status
+
   enum elevator_status: [:Active, :Inactive, :Intervention]
   # before_update :slack_notifier
   before_update :twilio_notifier

@@ -1,3 +1,15 @@
+# TDD with JEST
+
+This project calls the Open Weather Map API through RapidApi and returns simple html. The testing framework used in this project is Rspec.
+
+Depending on what test you want to run there are 3 different commands you can enter into the command line:
+
+    rspec spec/elevator_media_spec.rb
+    rspec spec/models/elevator_spec.rb
+    rspec spec/models/quote_spec.rb
+
+My 2 simple tests are just checking to make sure that I am getting back what I think I should be getting back depending on what is being sent to the function call.
+
 <p>Link to .NET REST API: https://github.com/thisfncodeio/Rocket_Elevators_REST_API </p>
 
 <p align='center'><img src="https://raw.githubusercontent.com/thisfncodeio/Rocket_Elevators_API/readmeTemplate/public/apiteam1logo.jpg"></p>

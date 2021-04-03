@@ -47,5 +47,6 @@ Rails.application.routes.draw do
   # match '/watson'     => 'watson#speak', via: :get
   get '/watson/update' => 'watson#speak'
  
+  get "/(*url)", to: redirect('/404')
    
 end

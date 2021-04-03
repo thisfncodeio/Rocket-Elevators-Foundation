@@ -1,4 +1,10 @@
 class Quote < ApplicationRecord
+  validates_presence_of :company_name
+  validates_presence_of :contact_name
+  validates_presence_of :building_type
+  validates_presence_of :product_line
+  validates_presence_of :created_at
+
 #    after_save :create_quote_ticket
 
 #   def create_quote_ticket
