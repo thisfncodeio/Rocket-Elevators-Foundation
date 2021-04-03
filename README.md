@@ -1,6 +1,6 @@
-# TDD with JEST
+# TDD with RSpec
 
-This project calls the Open Weather Map API through RapidApi and returns simple html. The testing framework used in this project is Rspec.
+This project calls the Open Weather Map API through RapidApi and returns simple html. The testing framework used in this project is RSpec.
 
 Depending on what test you want to run there are 3 different commands you can enter into the command line:
 
