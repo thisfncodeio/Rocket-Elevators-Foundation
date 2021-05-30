@@ -16,8 +16,7 @@ module ElevatorMedia
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
       request = Net::HTTP::Get.new(url)
-      # request["x-rapidapi-key"] = ENV['RAPIDAPI_KEY']
-      request["x-rapidapi-key"] = "5c79875105mshff840a030e58200p162034jsnfb92758ecb5c"
+      request["x-rapidapi-key"] = ENV['RAPIDAPI_KEY']
       request["x-rapidapi-host"] = 'community-open-weather-map.p.rapidapi.com'
 
       response = http.request(request)
